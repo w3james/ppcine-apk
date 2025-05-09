@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPCine - Ultimate Free Streaming App for Movies & TV Shows</title>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --secondary-color: #141414;
+            --accent-color: #f5f5f1;
+            --text-color: #ffffff;
+            --text-secondary: #b3b3b3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: var(--accent-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #f40612;
+            transform: scale(1.05);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* App Info Section */
+        .app-info {
+            padding: 80px 0;
+            background: #1a1a1a;
+        }
+        
+        .info-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .info-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .info-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .info-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .download-steps {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+        }
+        
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Experience Unlimited Entertainment with PPCine</h1>
+            <p>Stream the latest movies and TV series in stunning HD quality without any subscription fees or annoying ads</p>
+            <a href="#download" class="btn">Download Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container">
+        <h2 class="section-title">Why Choose PPCine?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎬</div>
+                <h3>Massive Content Library</h3>
+                <p>Access over 100,000 titles including Hollywood blockbusters, Bollywood hits, K-dramas, anime, and international cinema from around the world.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Multi-Device Support</h3>
+                <p>Enjoy seamless streaming on Android phones, tablets, smart TVs, and PCs with our optimized cross-platform experience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3>Offline Viewing</h3>
+                <p>Download your favorite content to watch later without needing an internet connection - perfect for travel or commuting.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3>HD Streaming Quality</h3>
+                <p>Experience crystal-clear viewing with options ranging from SD to Full HD, with adaptive streaming for all connection speeds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Multilingual Support</h3>
+                <p>Available in multiple languages including English, Spanish, Hindi, and more, with customizable subtitle options.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚫</div>
+                <h3>Ad-Free Experience</h3>
+                <p>Enjoy uninterrupted viewing without any commercial breaks or pop-up advertisements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Info Section -->
+    <section class="app-info">
+        <div class="container info-content">
+            <div class="info-text">
+                <h2>The Ultimate Streaming Companion</h2>
+                <p>PPCine has revolutionized mobile entertainment by offering a premium streaming experience completely free of charge. Unlike subscription-based platforms, our application provides instant access to a constantly updated library of content without requiring any registration or payment.</p>
+                <p>Developed with movie enthusiasts in mind, <a href="https://ppcinee.com/" target="_blank" style="color: var(--primary-color); text-decoration: none;">PPCine</a> delivers exceptional performance even on devices with limited specifications. The lightweight 39MB package belies its powerful capabilities, offering smooth playback and intuitive navigation that rivals paid services.</p>
+                <p>With regular weekly updates, users always have access to the newest releases across all genres. Our advanced features like playback speed control, resolution adjustment, and subtitle customization put you in complete control of your viewing experience.</p>
+            </div>
+            <div class="info-image">
+                <img src="https://via.placeholder.com/500x800" alt="PPCine App Screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download container" id="download">
+        <h2 class="section-title">Get Started in 3 Easy Steps</h2>
+        <div class="download-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Download</h3>
+                <p>Get the latest APK file directly to your Android device</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Install</h3>
+                <p>Allow installation from unknown sources and complete setup</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Enjoy</h3>
+                <p>Launch the app and start streaming your favorite content</p>
+            </div>
+        </div>
+        <a href="#" class="btn">Download v4.3.5 (39MB)</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 PPCine. All content is provided for personal, non-commercial use only.</p>
+            <p>Available for Android 4.0 and above | Supports multiple languages</p>
+        </div>
+    </footer>
+</body>
+</html>
